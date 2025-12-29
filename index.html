@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delfim Canuela</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="particulas">
+
+
+
+
+
+
+</div>
+
+<nav class="navegação">
+    <ul class="links">
+        <li> 
+            <a href="#Inicio" class="link">Inicio</a>
+        </li>
+
+        <li>
+            <a href="#Sobre" class="link">Sobre</a>
+        </li>
+
+        <li>
+            <a href="#Contacto" class="link">Contacto</a>
+        </li>
+    </ul>
+</nav>
+
+<main id="Inicio" class="cabecalho">
+   
+        <img src="./img/1747640962273.jpg" alt="Delfim Canuela" class="perfil-foto">
+        <h1>Delfim Canuela</h1>
+        <p class="eu">Estudante</p>
+    
+</main>
+<section id="Sobre" class="Sobre">
+    <h2 class="Sobre-titulo">Sobre Mim</h2>
+    <div class="Sobre-Caixa">
+        <p class="Sobre-Paragrafo">
+            Olá! Sou Estudante da Universidade Cuito Cuanavale , No Curso de Informática Para Gestão.
+        </p>
+        <br>
+        <p>
+            Meu maior foco é se tornar em um bom PROGRAMADOR , Graça aos conhecimentos que estou adquirindo dos meus PROFESSORES e algumas pesquisas sei que um dia irei Alcançar
+        </p>
+    </div>
+</section>
+<br><br><br>
+<section id="Projeto" class="Projeto">
+<h2 class="Titulo-Projeto">Meus Projectos</h2>
+
+<div class="Projecto-Caixa"></div>
+</section>
+
+
+<form id="Contacto" class="Contacto" onsubmit="enviar(event)">
+    <h2 class="Titulo-Contacto" >Entre em Contacto <img src="img/38f0d523ba92f50d149ab0311532f4ae.jpg" class="logozap"></h2>
+   
+    <div class="gform">
+        <input placeholder="Nome" class="nome" id="Nome">
+        <br><br><br>
+     <textarea placeholder="Digite Sua Mensagem" class="nome" id="Mensagem" rows="6"></textarea>
+     <br><br>
+     <button type="submit" class="botao">Enviar Whatsap</button>
+     </div>
+</form>
+
+<script>
+    function enviar(event){
+        event.preventDefault();
+
+        const Nome = document.getElementById("Nome").value;
+        const Mensagem = document.getElementById("Mensagem").value;
+        const telefone = "244935264758";
+
+        const texto = `Olá, me chamo *${Nome}*. 
+        *${Mensagem}*`;
+        const Mensagemft = encodeURIComponent(texto);
+        const url = `https://wa.me/${telefone}?text=${Mensagemft}`;
+
+        window.open(url, "_blank"); 
+    }
+</script>
+
+</body>
+</html>
